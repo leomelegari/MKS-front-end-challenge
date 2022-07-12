@@ -1,7 +1,11 @@
 import { Container, ContainerHeader } from "./styles";
-import Cart from "../../assets/images/cart.svg";
+import CartIcon from "../../assets/images/cart.svg";
+import { useState } from "react";
+import { Cart } from "../Cart";
 
 export const HeaderPage = () => {
+  const [sidebar, setSidebar] = useState(false);
+
   return (
     <Container>
       <ContainerHeader>
@@ -10,12 +14,16 @@ export const HeaderPage = () => {
             <strong className="MKS-logo">MKS</strong> <span>sistemas</span>
           </p>
         </div>
-        <div className="container-cart">
-          <div className="cart-icon">
-            <img src={Cart} alt="" />
+        {sidebar ? (
+          <Cart setSidebar={setSidebar} sidebar={sidebar} />
+        ) : (
+          <div className="container-cart" onClick={() => setSidebar(!sidebar)}>
+            <div className="cart-icon">
+              <img src={CartIcon} alt="" />
+            </div>
+            <div className="cart-counter">0</div>
           </div>
-          <div className="cart-counter">0</div>
-        </div>
+        )}
       </ContainerHeader>
     </Container>
   );

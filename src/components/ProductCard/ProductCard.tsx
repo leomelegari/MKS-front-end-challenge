@@ -3,8 +3,6 @@ import { Container, ContainerButton, ContainerInfo } from "./styles";
 
 import Bag from "../../assets/images/shopping-bag.svg";
 
-import { FaShoppingBasket } from "react-icons/fa";
-
 export const ProductCard = () => {
   return (
     <Container>

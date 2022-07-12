@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 215px;
   display: flex;
+  background-color: white;
   flex-direction: column;
   align-items: center;
   padding-top: 5px;
@@ -78,7 +79,7 @@ export const ContainerButton = styled.div`
   width: 100%;
   height: 31px;
   cursor: pointer;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 7px 7px;
   background-color: #0f52ba;
   justify-content: center;
   align-items: center;
