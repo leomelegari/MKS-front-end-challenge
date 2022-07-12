@@ -27,7 +27,6 @@ export const Container = styled.div`
 
   .nav-menu.active {
     right: 0;
-    transition: 0.3s;
   }
 
   .nav-menu-items {

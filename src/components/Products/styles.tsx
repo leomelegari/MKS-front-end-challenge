@@ -5,6 +5,6 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 30px auto;
+  margin: 10px auto;
   max-width: 950px;
 `;

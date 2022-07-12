@@ -3,23 +3,35 @@ import { Container, ContainerButton, ContainerInfo } from "./styles";
 
 import Bag from "../../assets/images/shopping-bag.svg";
 
-export const ProductCard = () => {
+interface ProductProps {
+  name: string;
+  price: number;
+  photo: string;
+  description: string;
+}
+
+export const ProductCard = ({
+  description,
+  name,
+  photo,
+  price,
+}: ProductProps) => {
   return (
     <Container>
       <ContainerInfo>
         <div className="image">
-          <img src={Logo}></img>
+          <img src={photo} />
         </div>
         <div className="title-price">
           <div className="title">
-            <p>Apple watch apple watch</p>
+            <p>{name}</p>
           </div>
           <div className="price">
-            <p>R$250</p>
+            <p>R${Number(price).toFixed(0)}</p>
           </div>
         </div>
         <div className="description">
-          <p>Redesigned from scratch and completely revised.</p>
+          <p>{description}</p>
         </div>
       </ContainerInfo>
       <ContainerButton>

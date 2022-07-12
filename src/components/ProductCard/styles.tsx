@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 215px;
+  height: 350px;
   display: flex;
   background-color: white;
   flex-direction: column;
   align-items: center;
   padding-top: 5px;
-  margin: 20px 10px;
+  margin: 10px 10px;
   justify-content: center;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.11);
@@ -21,14 +22,25 @@ export const Container = styled.div`
 `;
 
 export const ContainerInfo = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 0 15px;
+  height: 100%;
+  padding: 0 10px;
   cursor: default;
+
   .image {
     width: 100%;
+    height: 180px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 5px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   .title-price {
@@ -70,6 +82,10 @@ export const ContainerInfo = styled.div`
       max-width: 192px;
       font-size: 10px;
       line-height: 15px;
+      /* max-width: 15ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; */
     }
   }
 `;
